@@ -1,5 +1,9 @@
 @import 'csstyle';
 
+@include component(line) {
+    border-top: 1px solid #999;
+}
+
 @include component(button) {
     background: #6BD9ED;
     padding: 15px;
