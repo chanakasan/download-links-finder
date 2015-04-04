@@ -1,0 +1,14 @@
+{
+  "name": "download-links-finder",
+  "version": "0.0.0",
+  "description": "Finds all downloadable links in a webpage",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chanaka Sandaruwan <chanakasan@gmail.com>",
+  "license": "Apache License 2.0",
+  "dependencies": {
+    "express": "~4.12.3"
+  }
+}
