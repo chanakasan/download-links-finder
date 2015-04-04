@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <title>Download Links Finder</title>
@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="/assets/vendor/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/css/layout.css">
 </head>
-<body>
+<body ng-controller="MainCtrl">
     <div id="wrapper">
         <div id="header">
             header content...
         </div>
         <div id="content">
             <h2 class="lead">Download Links Finder</h2>
+            <p class="text-success">{{message}}</p>
         </div>
         <div id="footer">
             footer content...
@@ -24,6 +25,8 @@
     <!-- JavaScripts -->
     <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
     <script src="/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/assets/vendor/angular"></script>
+    <script src="/assets/vendor/angular/angular.min.js"></script>
+    <!-- src -->
+    <script src="/assets/js/src/app.js"></script>
 </body>
 </html>
