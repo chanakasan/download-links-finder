@@ -9,7 +9,10 @@
   "author": "Chanaka Sandaruwan <chanakasan@gmail.com>",
   "license": "Apache License 2.0",
   "dependencies": {
-    "express": "~4.12.3"
+    "express": "~4.12.3",
+    "bluebird": "~2.9.24",
+    "cheerio": "~0.19.0",
+    "request": "~2.55.0"
   },
   "devDependencies": {
     "grunt-contrib-sass": "~0.9.2",
