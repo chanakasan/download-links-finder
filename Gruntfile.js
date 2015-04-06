@@ -16,12 +16,18 @@ module.exports = function(grunt) {
         },
     };
     config.watch = {
-        css: {
+        sass: {
             files: 'resources/stylesheets/*.scss',
             tasks: ['sass'],
             options: {
                 livereload: true,
             },
+        },
+        server: {
+            files: ['start.log'],
+            options: {
+                livereload: true
+            }
         },
     };
 
