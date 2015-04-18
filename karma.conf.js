@@ -9,9 +9,19 @@ module.exports = function(config) {
             'js/src/**/*.js',
             'js/test/**/*.js',
         ],
-        browsers: [
-            'Chrome',
-        ],
+
+        browsers: ['Chrome_small'],
+
+        customLaunchers: {
+            Chrome_small: {
+                base: 'Chrome',
+                flags: [
+                    '--window-size=300,300',
+                    '--window-position=9999,9999',
+                ]
+            },
+        },
+
     });
 };
 
