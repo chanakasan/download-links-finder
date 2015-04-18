@@ -1,6 +1,6 @@
 'use strict';
 
-describe('myApp.controllers specs', function () {
+describe('myApp.controllers', function () {
     var scope;
     var Controller = null;
 
