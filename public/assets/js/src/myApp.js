@@ -1,6 +1,9 @@
 var app = angular.module('myApp', []);
 
-app.controller('MainCtrl', function($scope) {
+angular.module('myApp.controllers', []);
+angular.module('myApp.services', []);
+
+angular.module('myApp.controllers').controller('MainCtrl', function($scope) {
     $scope.data = {};
     $scope.data.is_submitted = false;
     $scope.message = 'hello AngularJS';
