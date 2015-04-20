@@ -22,21 +22,21 @@
                 <p class="text-success">{{message}}</p>
                 <br/> <br/>
 
-                <form name="website_form" novalidate>
-                    <div class="form-group col-xs-4" ng-class="{'has-error': website_form.$submitted && website_form.address.$error.required}">
-                        <input name="address" type="text" class="form-control" ng-model="data.website_address" required>
-                        <span class="text-danger" ng-show="website_form.$submitted && website_form.address.$error.required">You must provide a full website address</span>
+                <form name="webpageForm" ng-submit="submit(webpageForm.$valid)" novalidate>
+                    <div class="form-group col-xs-4" ng-class="{'has-error': form_submitted && webpageForm.url.$invalid}">
+                        <input name="url" type="text" class="form-control" ng-model="webpage.url" required>
+                        <span class="text-danger" ng-show="form_submitted && webpageForm.url.$error.required">You must provide a full webpage url</span>
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary" ng-click="find(website_form)">Find links</button>
-                        <button type="button" class="btn btn-default" ng-click="reset(website_form)">Reset</button>
+                        <button type="submit" class="btn btn-primary">Get links</button>
+                        <button type="button" class="btn btn-default" ng-click="reset()">Clear</button>
                     </div>
                 </form>
 
                 <br/> <br/>
-                <div class="results" ng-if="data.is_submitted">
-                    <p class="text-primary"> Download links for: {{ data.website_address }}</p>
+                <div class="results" ng-if="request_completed">
+                    <p class="text-primary"> Download links for: {{ webpage.url }}</p>
                 </div>
             </div>
         </div>

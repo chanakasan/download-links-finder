@@ -1,11 +1,24 @@
 'use strict';
 
 angular.module('myApp.controllers').controller('MainCtrl', function($scope) {
-    $scope.data = {};
-    $scope.data.is_submitted = false;
-    $scope.message = 'hello AngularJS';
+    $scope.message = '- powered by AngularJS';
 
-    $scope.find = function() {
-        $scope.data.is_submitted = true;
+    // form
+    $scope.webpage = {};
+    $scope.form_submitted = false;
+    $scope.request_completed = false;
+
+    $scope.submit = function(isValid) {
+        $scope.form_submitted = true;
+        console.log('submitted!');
+
+        if (isValid) {
+            $scope.message = 'Awesome';
+            $scope.request_completed = true;
+        }
+    };
+
+    $scope.reset = function() {
+        $scope.webpage = {};
     };
 });
